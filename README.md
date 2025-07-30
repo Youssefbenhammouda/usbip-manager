@@ -22,6 +22,72 @@ A Visual Studio Code extension that lets you list, attach, and detach USB/IP dev
 
 ---
 
+### 🧱 Build & Package
+
+To build and package the extension locally:
+
+#### 1. **Install Dependencies**
+
+Make sure you have [Node.js](https://nodejs.org/) installed.
+
+Then run:
+
+```bash
+npm install
+```
+
+This installs all required dependencies.
+
+---
+
+#### 2. **Build the Extension**
+
+Compile the TypeScript code:
+
+```bash
+npm run compile
+```
+
+This outputs the compiled code to the `out/` folder.
+
+---
+
+#### 3. **Run the Extension in VS Code (Development Mode) (for testing only)**
+
+1. Open the extension project in VS Code.
+2. Press `F5` to launch a **new Extension Development Host** window.
+3. Test the extension commands via the Command Palette.
+
+---
+
+#### 4. **Package for Distribution**
+
+Install the VS Code packaging tool if not already installed:
+
+```bash
+npm install -g vsce
+```
+
+Then create a `.vsix` package:
+
+```bash
+vsce package
+```
+
+This will generate a file like:
+
+```
+usbip-manager-0.0.1.vsix
+```
+
+You can install this using:
+
+```bash
+code --install-extension usbip-manager-0.0.1.vsix
+```
+
+
+
 ## ⚙️ Configuration
 
 Add your client IPs in VS Code settings:
